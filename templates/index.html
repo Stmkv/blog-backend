@@ -1,5 +1,7 @@
-{% extends 'base.html' %} {% load static %} {% block title %} Home {% endblock
-%} {% block content %}
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Home {%endblock %}
+{% block content %}
 <main class="site-main">
   <!--================Hero Banner start =================-->
   <section class="mb-30px">
@@ -25,17 +27,10 @@
           <div class="card blog__slide text-center">
             <div class="blog__slide__img">
               {% if post.image_url %}
-              <img
-                class="card-img rounded-0"
-                src="{{ post.image_url }}"
-                alt="Фотография поста"
-              />
+              <img class="card-img rounded-0" src="{{ post.image_url }}" alt="Фотография поста" />
               {% else %}
-              <img
-                class="card-img rounded-0"
-                src="{% static 'img/banner/blog.png' %}"
-                alt="Стандартная фотография поста"
-              />
+              <img class="card-img rounded-0" src="{% static 'img/banner/blog.png' %}"
+                alt="Стандартная фотография поста" />
               {% endif %}
             </div>
             <div class="blog__slide__content">
@@ -61,41 +56,26 @@
           <div class="single-recent-blog-post">
             <div class="thumb">
               {% if post.image_url %}
-              <img
-                class="img-fluid"
-                src="{{ post.image_url }}"
-                alt="Фотограя поста"
-              />
+              <img class="img-fluid" src="{{ post.image_url }}" alt="Фотограя поста" />
               {% else %}
-              <img
-                class="img-fluid"
-                src="{% static 'img/banner/blog.png' %}"
-                alt="Стандартная фотография поста"
-              />
+              <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="Стандартная фотография поста" />
               {% endif %}
               <ul class="thumb-info" style="max-width: 550px">
                 <li>
                   <a href="#"><i class="ti-user"></i>{{ post.author }}</a>
                 </li>
                 <li>
-                  <a href="#"
-                    ><i class="ti-notepad"></i>{{ post.published_at }}</a
-                  >
+                  <a href="#"><i class="ti-notepad"></i>{{ post.published_at }}</a>
                 </li>
                 <li>
-                  <a href="#"
-                    ><i class="ti-themify-favicon"></i
-                    >{{post.comments_amount}}</a
-                  >
+                  <a href="#"><i class="ti-themify-favicon"></i>{{post.comments_amount}}</a>
                 </li>
               </ul>
             </div>
             <div class="details mt-20">
               <h3>{{ post.title }}</h3>
               <p>{{ post.text|truncatechars:200 }}</p>
-              <a class="button" href="{% url 'post_detail' post.slug %}"
-                >Read More <i class="ti-arrow-right"></i
-              ></a>
+              <a class="button" href="{% url 'post_detail' post.slug %}">Read More <i class="ti-arrow-right"></i></a>
             </div>
           </div>
           {% endfor %}
@@ -136,14 +116,8 @@
               <h4 class="single-sidebar-widget__title">Newsletter</h4>
               <div class="form-group mt-30">
                 <div class="col-autos">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="inlineFormInputGroup"
-                    placeholder="Enter email"
-                    onfocus="this.placeholder = ''"
-                    onblur="this.placeholder = 'Enter email'"
-                  />
+                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email"
+                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'" />
                 </div>
               </div>
               <button class="bbtns d-block mt-20 w-100">Subcribe</button>
@@ -181,34 +155,18 @@
           <h6>Newsletter</h6>
           <p>Stay update with our latest</p>
           <div class="" id="mc_embed_signup">
-            <form
-              target="_blank"
-              novalidate
+            <form target="_blank" novalidate
               action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-              method="get"
-              class="form-inline"
-            >
+              method="get" class="form-inline">
               <div class="d-flex flex-row">
-                <input
-                  class="form-control"
-                  name="EMAIL"
-                  placeholder="Enter Email"
-                  onfocus="this.placeholder = ''"
-                  onblur="this.placeholder = 'Enter Email '"
-                  required=""
-                  type="email"
-                />
+                <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''"
+                  onblur="this.placeholder = 'Enter Email '" required="" type="email" />
 
                 <button class="click-btn btn btn-default">
                   <span class="lnr lnr-arrow-right"></span>
                 </button>
                 <div style="position: absolute; left: -5000px">
-                  <input
-                    name="b_36c4fd991d266f23781ded980_aefe40901a"
-                    tabindex="-1"
-                    value=""
-                    type="text"
-                  />
+                  <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text" />
                 </div>
               </div>
               <div class="info"></div>
@@ -238,9 +196,7 @@
         </div>
       </div>
     </div>
-    <div
-      class="footer-bottom d-flex justify-content-center align-items-center flex-wrap"
-    >
+    <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
       <p class="footer-text m-0">
         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
         Copyright &copy;
